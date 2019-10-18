@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131757217-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131757217-1');
+    </script>
+    <title>Dream2aker</title>
+    <meta charset="utf-8">
+    <style>
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      h1 {
+        text-align: center;
+        border-bottom: 1px solid gray;
+        padding: 20px;
+        margin:0;
+      }
+      #grid ol {
+        border-right: 1px solid gray;
+        width:100px;
+        margin: 0;
+        padding: 20px;
+        padding-left: 30px;
+      }
+      body{
+        margin:0;
+        font-family: "Arial", sans-serif;
+      }
+      #grid {
+        display:grid;
+        grid-template-columns: 170px 1fr;
+      }
+      h4 {
+        border-top: 1px solid gray;
+        padding:10px;
+        margin:0;
+      }
+      @media(max-width:800px){
+        #grid{
+          display: block;
+        }
+        #grid ol {
+        border-right: none;
+        }
+        h1{
+            border-bottom: none;
+        }
+        iframe {
+            width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html">Dream2aker</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+          if(document.querySelector('#night_day').value === 'night'){
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            document.querySelector('#night_day').value = 'day';
+          }
+          else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            document.querySelector('#night_day').value = 'night';
+          }
+    ">
+
+    <div id="grid">
+      <ol>
+        <li><a href="1.html">인사말</a></li>
+        <li><a href="2.html">HTML</a></li>
+        <li><a href="3.html">CSS</a></li>
+        <li><a href="4.html">JavaScript</a></li>
+      </ol>
+      <div>
+          <p style="margin-top:20px;">
+            안녕하세요. Dream2aker입니다. 이곳은 프로그래밍 공부를 위한 공간 입니다. <br>
+            <br>
+            Dream2aker <br>
+          </p>
+        <h3>코딩 소개 영상</h3>
+          <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ttLx9MbrCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+          출처: <a href="https://opentutorials.org/" target="_blank" title="생활코딩">생활코딩</a>
+          </p>
+      </div>
+    </div>
+      <h4>댓글</h4>
+      <p>
+        <div id="disqus_thread"></div>
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://dream2aker.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </p>
+      <p>
+          <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5c326d8482491369baa0b8eb/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+        <!--End of Tawk.to Script-->
+      </p>
+  </body>
+</html>
