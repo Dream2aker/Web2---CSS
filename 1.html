@@ -12,107 +12,33 @@
     </script>
     <title>D2 - INTRO</title>
     <meta charset="utf-8">
-    <style>
-      .unseen {
-        color: gray;
-      }
-      a {
-        color: black;
-        text-decoration: none;
-      }
-      h1 {
-        text-align: center;
-        border-bottom: 1px solid gray;
-        padding: 20px;
-        margin:0;
-      }
-      #grid ol {
-        border-right: 1px solid gray;
-        width:100px;
-        margin: 0;
-        padding: 20px;
-        padding-left: 30px;
-      }
-      body{
-        margin:0;
-        font-family: "Arial", sans-serif;
-      }
-      #grid {
-        display:grid;
-        grid-template-columns: 170px 1fr;
-      }
-      h4 {
-        border-top: 1px solid gray;
-        padding:10px;
-        margin:0;
-      }
-      @media(max-width:800px){
-        #grid{
-          display: block;
-        }
-        #grid ol {
-        border-right: none;
-        }
-        h1{
-            border-bottom: none;
-        }
-        img{
-          width:100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
   </head>
   <body>
     <h1><a href="index.html">Dream2aker</a></h1>
-    <input type="button" value="night" onclick="
-          var target = document.querySelector('body');
-          if(this.value === 'night'){
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value = 'day';
-
-            var acolor = document.querySelectorAll('a');
-            i = 0;
-            while(i < acolor.length){
-              acolor[i].style.color = 'powderblue';
-              i = i + 1;
-            }
-          }
-          else {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            this.value = 'night';
-
-            var acolor = document.querySelectorAll('a');
-            i = 0;
-            while(i < acolor.length){
-              acolor[i].style.color = 'black';
-              i = i + 1;
-            }
-          }
-    ">
-    <div id="grid">
-      <ol>
-        <li><a href="1.html">인사말</a></li>
-        <li><a href="2.html" class="unseen">HTML</a></li>
-        <li><a href="3.html" class="unseen">CSS</a></li>
-        <li><a href="4.html" class="unseen">JavaScript</a></li>
-      </ol>
-      <div>
-
-        <h2>인사말</h2>
-          <p style="margin-top:20px;">
-            안녕하세요. 처음 배우는 <a href="https://www.w3.org/TR/html52/" target="_blank" title="HTML 5.2">HTML</a> 프로그래밍 입니다.<br>
-            나중에 어떻게 사용할지는 아직 모르지만 배우고 있다는 점에서 <strong>제 스스로에게 <u>상</u>을 주고 싶습니다.</strong><br>
-            여러분의 응원 부탁 드립니다.<br>
-            감사합니다.<br>
-            <br>
-            Dream2aker <br>
-            <br>
-            <img src="coding.jpg" width="400"> <br>
-          </p>
-      </div>
-    </div>
+      <input type="button" value="night" onclick="NightDayHandler(this);">
+        <div id="grid">
+          <ol>
+            <li><a href="1.html">인사말</a></li>
+            <li><a href="2.html" class="unseen">HTML</a></li>
+            <li><a href="3.html" class="unseen">CSS</a></li>
+            <li><a href="4.html" class="unseen">JavaScript</a></li>
+          </ol>
+          <div>
+            <h2>인사말</h2>
+              <p style="margin-top:20px;">
+                안녕하세요. 처음 배우는 <a href="https://www.w3.org/TR/html52/" target="_blank" title="HTML 5.2">HTML</a> 프로그래밍 입니다.<br>
+                나중에 어떻게 사용할지는 아직 모르지만 배우고 있다는 점에서 <strong>제 스스로에게 <u>상</u>을 주고 싶습니다.</strong><br>
+                여러분의 응원 부탁 드립니다.<br>
+                감사합니다.<br>
+                <br>
+                Dream2aker <br>
+                <br>
+                <img src="coding.jpg" width="400"> <br>
+              </p>
+          </div>
+        </div>
       <h4>댓글</h4>
       <p>
         <div id="disqus_thread"></div>
