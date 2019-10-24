@@ -1,29 +1,33 @@
-function LinksSetColor(color){
-  var acolor = document.querySelectorAll('a');
-  i = 0;
-  while(i < acolor.length){
-  acolor[i].style.color = color;
-  i = i + 1;
-  }
+var Links = {
+    setColor:function(color){
+      var acolor = document.querySelectorAll('a');
+      i = 0;
+      while(i < acolor.length){
+      acolor[i].style.color = color;
+      i = i + 1;
+      }
+    }
 }
-function BodySetBackgroundColor(color){
-  document.querySelector('body').style.backgroundColor = color;
-}
-function BodySetColor(color){
+var Body = {
+  setBackgroundColor:function (color){
+    document.querySelector('body').style.backgroundColor = color;
+  },
+  setColor:function (color){
   document.querySelector('body').style.color = color;
+  }
 }
 function NightDayHandler(self){
    var target = document.querySelector('body');
      if(self.value === 'night'){
-       BodySetBackgroundColor('black');
-       BodySetColor('white');
+       Body.setBackgroundColor('black');
+       Body.setColor('white');
        self.value = 'day';
-       LinksSetColor('powderblue')
+       Links.setColor('powderblue')
        }
      else {
-       BodySetBackgroundColor('white');
-       BodySetColor('black');
+       Body.setBackgroundColor('white');
+       Body.setColor('black');
        self.value = 'night';
-       LinksSetColor('black');
+       Links.setColor('black');
       }
  }
